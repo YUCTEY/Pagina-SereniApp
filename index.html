@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SereniApp</title>
+    <meta name="description"
+        content="SereniApp monitorea tu estado de ánimo y bienestar, con Numa, tu asistente de IA, siempre disponible para acompañarte.">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="brand">
+                <img src="assets/img/logo-icon.png" alt="SereniApp">
+                Sereni<em>App</em>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#funciones">Funciones</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#asistente-ia">Asistente IA</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#descarga" class="btn btn-outline btn-sm">Iniciar sesión</a>
+                <a href="#descarga" class="btn btn-primary btn-sm">Descargar gratis</a>
+                <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="badge"><span class="badge-dot"></span> Bienestar inteligente</span>
+                    <h1>Tu salud mental<br>y física, en <em>equilibrio</em></h1>
+                    <p>SereniApp acompaña tu estado de ánimo día a día, con Numa tu asistente de IA siempre disponible
+                        para escucharte y ayudarte a encontrar calma.</p>
+                    <div class="hero-actions">
+                        <a href="#descarga" class="btn btn-primary">Empieza gratis</a>
+                        <a href="#como-funciona" class="btn btn-outline">Ver cómo funciona →</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="avatars">
+                            <img src="assets/people/testimonial-jenny.jpg" alt="Jenny Almendariz">
+                            <img src="assets/people/testimonial-karina.jpg" alt="Karina Puga">
+                            <img src="assets/people/testimonial-misael.jpg" alt="Misael Salazar">
+                        </div>
+                        <span>Ya usado por miles de personas</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <img class="float-numa" src="assets/numa/numa-saludo.png" alt="Numa saludando">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="assets/screenshots/screenshot-home.png" alt="Pantalla de inicio de SereniApp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= STATS ================= -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="reveal">
+                    <div class="num">50k+</div>
+                    <div class="label">usuarios activos</div>
+                </div>
+                <div class="reveal">
+                    <div class="num">4.9★</div>
+                    <div class="label">valoración media</div>
+                </div>
+                <div class="reveal">
+                    <div class="num">92%</div>
+                    <div class="label">reportan mejora</div>
+                </div>
+                <div class="reveal">
+                    <div class="num">24/7</div>
+                    <div class="label">asistente disponible</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FUNCIONES ================= -->
+        <section id="funciones" class="showcase">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Lo que ofrece</span>
+                    <h2>Todo lo que necesitas para <em>cuidarte</em></h2>
+                    <p>Dos vistazos a SereniApp: tu día a día y tu red de seguridad, siempre a un toque de distancia.
+                    </p>
+                </div>
+
+                <article class="showcase-item reveal">
+                    <div class="showcase-glow showcase-glow-purple"></div>
+                    <div class="showcase-phone">
+                        <div class="coverflow" data-coverflow>
+                            <button class="coverflow-arrow coverflow-arrow-prev" data-coverflow-prev
+                                aria-label="Anterior">‹</button>
+
+                            <div class="coverflow-track">
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-numa-chat.png"
+                                        alt="Chat con Numa"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-mi-estado.png"
+                                        alt="Pantalla Mi Estado"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-meditacion.png"
+                                        alt="Sesión de meditación"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-musica.png"
+                                        alt="Sonidos para relajarte"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-diario.png"
+                                        alt="Pantalla de Diario"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-respiracion.png"
+                                        alt="Pantalla de Respiración"></div>
+                                <div class="coverflow-slide"><img src="assets/screenshots/screenshot-ejercicios.png"
+                                        alt="Rutina de ejercicios"></div>
+                            </div>
+
+                            <button class="coverflow-arrow coverflow-arrow-next" data-coverflow-next
+                                aria-label="Siguiente">›</button>
+                        </div>
+                    </div>
+                    <div class="showcase-copy">
+                        <span class="feature-tag" style="background:var(--purple-light); color:var(--purple-dark);">Tu
+                            día a día</span>
+                        <h3>Todo lo que necesitas, en un solo lugar</h3>
+                        <p>Habla con Numa, registra tu ánimo, medita, escucha sonidos relajantes, escribe en tu diario,
+                            respira con calma o muévete un poco cada herramienta a un toque de distancia.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= CÓMO FUNCIONA ================= -->
+        <section id="como-funciona" style="background:#fff;">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">El proceso</span>
+                    <h2>Simple, <em>constante</em> y efectivo</h2>
+                    <p>Cuatro pasos para construir hábitos de bienestar que perduran.</p>
+                </div>
+
+                <div class="steps">
+                    <div class="step reveal">
+                        <div class="step-num">1</div>
+                        <h4>Regístrate</h4>
+                        <p>Crea tu perfil en minutos y personaliza tus objetivos de bienestar.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">2</div>
+                        <h4>Monitorea</h4>
+                        <p>Registra tu estado de ánimo y estrés con chequeo rápidos cada día.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">3</div>
+                        <h4>Chatea con Numa</h4>
+                        <p>Tu asistente de IA te ofrece acompañamiento real y personalizado.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">4</div>
+                        <h4>Progresa</h4>
+                        <p>Observa tu evolución con reportes claros y celebra cada avance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ASISTENTE IA ================= -->
+        <section id="asistente-ia" class="ai-section">
+            <div class="container ai-inner">
+                <div class="ai-visual reveal">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="assets/screenshots/screenshot-numa-chat.png" alt="Conversación con Numa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-copy reveal">
+                    <span class="eyebrow">Asistente inteligente</span>
+                    <h2>Un apoyo <em>personalizado</em>, siempre contigo</h2>
+                    <p>Numa aprende de tus patrones de bienestar y te ofrece acompañamiento real, no genérico. Desde
+                        motivación diaria hasta técnicas de manejo del estrés.</p>
+                    <ul class="ai-list">
+                        <li><span class="check">✓</span> Análisis de patrones emocionales en tiempo real</li>
+                        <li><span class="check">✓</span> Recordatorios y chequeos personalizados según tu rutina</li>
+                        <li><span class="check">✓</span> Técnicas de respiración, consciencia y manejo del estrés</li>
+                        <li><span class="check">✓</span> Seguimiento semanal del progreso con logros claros</li>
+                        <li><span class="check">✓</span> Disponible 24/7, sin juicios, siempre presente</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIOS ================= -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Lo que dicen</span>
+                    <h2>Personas que <em>ya sienten</em> el cambio</h2>
+                    <p>Miles de usuarios transformando su bienestar cada día</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Numa se siente como alguien que realmente te escucha. Ya es parte de mi rutina antes de
+                            dormir."</p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img" src="assets/people/testimonial-jenny.jpg"
+                                alt="Jenny Almendariz">
+                            <div>
+                                <div class="name">Jenny Almendariz</div>
+                                <div class="role">Estudiante</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Como ingeniero, valoro que la app sea simple y rápida. Registrar mi ánimo no me toma ni un
+                            minuto."</p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img" src="assets/people/testimonial-misael.jpg"
+                                alt="Misael Salazar">
+                            <div>
+                                <div class="name">Misael Salazar</div>
+                                <div class="role">Ingeniero en Sistemas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"El botón SOS me da tranquilidad. Saber que está ahí, siempre visible, ya es un alivio."</p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img" src="assets/people/testimonial-karina.jpg"
+                                alt="Karina Puga">
+                            <div>
+                                <div class="name">Karina Puga</div>
+                                <div class="role">Estudiante</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Entre clases y trabajo, el diario y la meditación guiada me ayudan a bajarle a la ansiedad."
+                        </p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img" src="assets/people/testimonial-derek.jpg"
+                                alt="Derek Ali">
+                            <div>
+                                <div class="name">Derek Ali</div>
+                                <div class="role">Estudiante</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Desde mi práctica clínica, veo el valor de una herramienta que acompaña a la persona entre
+                            sesiones."</p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img testimonial-avatar-logo"
+                                src="assets/people/testimonial-fortino.jpg" alt="Fortino Carlos">
+                            <div>
+                                <div class="name">Fortino Carlos</div>
+                                <div class="role">Psicólogo</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Me gusta que no se siente como una app fría. Numa realmente pregunta cómo estoy y no lo
+                            olvida."</p>
+                        <div class="testimonial-person">
+                            <img class="testimonial-avatar-img" src="assets/people/testimonial-guiliana.jpg"
+                                alt="Guiliana Calderón">
+                            <div>
+                                <div class="name">Guiliana Calderón</div>
+                                <div class="role">Estudiante</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CASOS REALES (fotos) ================= -->
+        <section id="casos-reales" class="people-proof">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Casos reales</span>
+                    <h2>Así se vive <em>SereniApp</em></h2>
+                    <p>Personas de verdad probando la app en su día a día.</p>
+                </div>
+
+                <div class="coverflow coverflow-photos" data-coverflow data-coverflow-step="0.6">
+                    <button class="coverflow-arrow coverflow-arrow-prev" data-coverflow-prev
+                        aria-label="Anterior">‹</button>
+
+                    <div class="coverflow-track">
+                        <div class="coverflow-slide coverflow-slide--photo"><img
+                                src="assets/people/evidence-chat-amigo.jpg" alt="Persona probando el chat de Numa">
+                        </div>
+                        <div class="coverflow-slide coverflow-slide--photo"><img
+                                src="assets/people/evidence-landing-movil.jpg"
+                                alt="Persona viendo SereniApp desde su celular"></div>
+                        <div class="coverflow-slide coverflow-slide--photo"><img
+                                src="assets/people/evidence-chat-papa.jpg" alt="Persona usando el chat de apoyo"></div>
+                        <div class="coverflow-slide coverflow-slide--photo"><img
+                                src="assets/people/evidence-prueba-grupal-1.jpg"
+                                alt="Dos personas probando SereniApp juntas"></div>
+                        <div class="coverflow-slide coverflow-slide--photo"><img
+                                src="assets/people/evidence-prueba-grupal-2.jpg" alt="Dos personas revisando SereniApp">
+                        </div>
+                    </div>
+
+                    <button class="coverflow-arrow coverflow-arrow-next" data-coverflow-next
+                        aria-label="Siguiente">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA FINAL ================= -->
+        <section id="descarga" class="final-cta">
+            <div class="container reveal">
+                <h2>Empieza hoy tu jornada de <em>bienestar</em></h2>
+                <p>Prueba SereniApp gratis. Sin suscripción inicial y sin complicaciones: solo tú y tu bienestar.</p>
+
+                <div class="store-buttons">
+                    <a href="#" class="store-btn">
+                        <span>🍎</span>
+                        <span><span class="top">Disponible en</span><span class="bottom">App Store</span></span>
+                    </a>
+                    <a href="#" class="store-btn">
+                        <span>▶</span>
+                        <span><span class="top">Disponible en</span><span class="bottom">Google Play</span></span>
+                    </a>
+                </div>
+
+                <p class="fine-print"> Gratis iOS y Android</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-brand">Sereni<em>App</em></span>
+                <nav class="footer-links">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </div>
+            <p class="footer-bottom">© <span data-year>2026</span> SereniApp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

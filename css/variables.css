@@ -1,0 +1,42 @@
+/*
+  variables.css
+  Un solo lugar para colores, tipografía, espaciados y sombras.
+  Si algún día cambia la paleta de la app, solo se toca este archivo.
+*/
+
+:root {
+    /* Colores de marca (idénticos a los de la app) */
+    --purple: #7C5CBF;
+    --purple-light: #EDE9FF;
+    --purple-dark: #5A3FA0;
+    --purple-btn: #6B42D4;
+    --teal: #3BBDA0;
+    --teal-dark: #2A8C75;
+    --pink: #E8547A;
+    --pink-light: #FFF0F2;
+
+    /* Fondo y texto */
+    --bg: #F5F3FF;
+    --bg-alt: #FFFFFF;
+    --bg-dark: #171225;
+    --text: #1A1433;
+    --text-muted: #7A7A9A;
+    --text-on-dark: #EDE9FF;
+    --border: #E0DDFB;
+
+    /* Tipografía */
+    --font-display: "Playfair Display", "Georgia", serif;
+    --font-body: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Radios y sombras */
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 28px;
+    --shadow-sm: 0 2px 10px rgba(90, 63, 160, 0.08);
+    --shadow-md: 0 12px 30px rgba(90, 63, 160, 0.14);
+    --shadow-lg: 0 20px 50px rgba(90, 63, 160, 0.20);
+
+    /* Layout */
+    --max-width: 1180px;
+    --section-padding: clamp(64px, 8vw, 120px);
+}

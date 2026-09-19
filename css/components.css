@@ -1,0 +1,353 @@
+/*
+  components.css
+  Piezas reutilizables: navbar, botones, tarjetas, el marco de celular, etc.
+  Nada aquí depende de una sección en particular.
+*/
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.navbar.is-scrolled {
+    border-bottom-color: var(--border);
+    box-shadow: 0 4px 20px rgba(90, 63, 160, 0.06);
+}
+
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 24px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--purple-dark);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.brand em {
+    color: var(--purple);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.8;
+    transition: opacity .15s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--purple);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-toggle span,
+.nav-toggle::before,
+.nav-toggle::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--purple-dark);
+    border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.nav-toggle span { margin: 5px 0; }
+
+.nav-toggle.is-open::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span { opacity: 0; }
+.nav-toggle.is-open::after { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- BOTONES ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 26px;
+    border-radius: 30px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border: none;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+    white-space: nowrap;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(90, 63, 160, 0.28);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 14px 30px rgba(90, 63, 160, 0.36);
+}
+
+.btn-outline {
+    background: #fff;
+    color: var(--purple-dark);
+    border: 1.5px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--purple);
+}
+
+.btn-sm {
+    padding: 9px 18px;
+    font-size: 13px;
+}
+
+/* ---------- BADGE / PILL ---------- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--purple-light);
+    color: var(--purple-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 30px;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal);
+}
+
+/* ---------- MARCO DE CELULAR (mockup propio, sin capturas con bisel) ---------- */
+.phone-frame {
+    position: relative;
+    width: min(300px, 78vw);
+    aspect-ratio: 300 / 610;
+    background: #0d0b16;
+    border-radius: 46px;
+    padding: 12px;
+    box-shadow: var(--shadow-lg);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.phone-frame::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 22px;
+    background: #0d0b16;
+    border-radius: 0 0 16px 16px;
+    z-index: 2;
+}
+
+.phone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Variante morada del marco, para el showcase */
+.phone-frame-purple {
+    background: linear-gradient(160deg, var(--purple-dark), #3D2B70);
+}
+
+.phone-frame-purple::before {
+    background: linear-gradient(160deg, var(--purple-dark), #3D2B70);
+}
+
+/* ---------- TARJETAS ---------- */
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ---------- ICONO CIRCULAR ---------- */
+.icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: 48px 0 28px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand {
+    font-family: var(--font-display);
+    font-size: 19px;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 26px;
+}
+
+.footer-links a {
+    font-size: 13.5px;
+    color: rgba(237, 233, 255, 0.7);
+    transition: color .15s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    text-align: center;
+    font-size: 12.5px;
+    color: rgba(237, 233, 255, 0.5);
+}
+
+/* ---------- RESPONSIVE COMPONENTES ---------- */
+@media (max-width: 860px) {
+    .nav-links {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 8px 24px 18px;
+        border-bottom: 1px solid var(--border);
+        transform: translateY(-8px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .nav-links.is-open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-actions .btn-outline {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Pantallas angostas de verdad*/
+@media (max-width: 480px) {
+    .navbar-inner {
+        padding: 12px 16px;
+    }
+
+    .brand {
+        font-size: 17px;
+        gap: 8px;
+    }
+
+    .brand img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-actions .btn-primary {
+        display: none;
+    }
+}

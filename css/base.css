@@ -1,0 +1,130 @@
+/*
+  base.css
+  Reset + estilos generales que aplican a todo el sitio.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--text);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+em, .accent {
+    font-style: italic;
+    color: var(--purple-dark);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: var(--section-padding) 0;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--purple-dark);
+}
+
+.section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+}
+
+.section-head .eyebrow {
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.section-head h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 14px;
+}
+
+.section-head p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Utilidad para animaciones al hacer scroll (ver main.js) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
